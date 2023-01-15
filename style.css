@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: green;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(12, 200px) ;
+    margin: 20px;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    margin-right: 20px;
+    position: relative;
+    background: white;
+    
+}
+
+.box2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    position: relative;
+    background: white;
+}
+
+.box3 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+}
+
+.box4 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    grid-row-end: 9;
+    margin-right: 20px;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+    
+}
+
+.box5 {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+}
+
+.box6 {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+}
+
+.img1 {
+    width: 100%;
+}
+
+.img2 {
+    width: 100%;
+}
+
+
+.vardas {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.vardas p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.vardas p:hover {
+    color: rgba(0, 0, 0, 0.259);
+}
+
+h1 {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+
+@media (max-width: 320px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat (auto-fit, minmax(320px, 1fr));
+    }
+
+    .box {
+        grid-column-start: 1;
+    }
+
+    
+
+    .box1 {
+        margin-right: 0;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .box2 {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        margin-top: 20px;
+    }
+
+    .box3 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    .box4 {
+        grid-row-start: 6;
+        grid-row-end: 8;
+        margin-right: 0;
+    }
+
+    .box5 {
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+    .box6 {
+        grid-row-start: 9;
+        grid-row-end: 10;
+    }
+
+
+    p {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 13px;
+    }
+
+    .img1 {
+        width: 100%;
+        
+    }
+
+    .vardas {
+        bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .vardas p {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 630px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 150px) ;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    .vardas p {
+        font-size: 10px;
+    }
+}
